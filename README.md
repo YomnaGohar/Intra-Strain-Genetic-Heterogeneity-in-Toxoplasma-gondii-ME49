@@ -32,7 +32,7 @@ This pipeline outputs for each sample:
 ## 📊 Reproducing Figure 2B
 
 This section outlines how to compute basic sequencing statistics for each sample.
-1. Generate basic read statistics (number of reads, mean length, N50): ```bash seqkit stats -a toxo.fastq ```  
-2. Count number of long reads >= 10kb:  ```bash seqkit seq -m 10000 toxo.fastq | grep '^@' | wc -l ```  
-3. Count number of long reads >= 100kb:  ```bash seqkit seq -m 100000 toxo.fastq | grep '^@' | wc -l```
+1. Generate basic read statistics (number of reads, mean length, N50): ``` seqkit stats -a toxo.fastq ```  
+2. Count number of long reads >= 10kb:  ``` seqkit seq -m 10000 toxo.fastq | grep '^@' | wc -l ```  
+3. Count number of long reads >= 100kb:  ``` seqkit seq -m 100000 toxo.fastq | grep '^@' | wc -l```
 
