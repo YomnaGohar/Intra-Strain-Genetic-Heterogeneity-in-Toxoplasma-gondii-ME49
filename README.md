@@ -93,7 +93,10 @@ Provides chromosome lengths across the three assemblies, based on the longest co
 ## 📊 Reproducing Figure 3A
 
 This section outlines how to compute assembly statistics and gene mapping metrics for the three assemblies.
-### 1. Assembly Statistics ```bash seqkit stats -a assembly.fasta```
+ 1. **Assembly Statistics**
+     ```bash
+     seqkit stats -a assembly.fasta
+    ```
 
 
 
