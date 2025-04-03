@@ -37,3 +37,18 @@ This section outlines how to compute basic sequencing statistics for each sample
 3. Count number of long reads >= 100kb:  ``` seqkit seq -m 100000 toxo.fastq | grep '^@' | wc -l```
 4. Coverage: T. gondii sequencing data / 65000000
 
+   ---
+
+##  Assembly Comparisons
+Download assemblies
+2015T: Genbank acession X
+Xia et al: (GenBank: JACEHA000000000.1)
+TGA4: (NCBI RefSeq assembly: GCF_000006565.2)
+---
+
+## 📊 Reproducing Figure 3A
+
+This section outlines how to compute asembly statistics for the three assemblies.
+1. Assembly length, Number of contigs and Contig N50: ``` seqkit stats -a <assembly.fasta> ```  
+2. 
+
