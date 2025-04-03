@@ -120,6 +120,13 @@ Barplot
     python scripts/comparing_two_assemblies.py <output.pdf>
     ```
 
+## 📊 Reproducing Figure 3D  
+
+Barplot
+
+    ```bash
+    python scripts/comparing_two_assemblies.py <output.pdf>
+    ```
 
 
 
