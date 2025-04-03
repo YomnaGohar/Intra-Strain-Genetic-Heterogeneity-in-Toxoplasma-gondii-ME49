@@ -111,6 +111,12 @@ This section outlines how to compute assembly statistics and gene mapping metric
     ```bash
     python scripts/Check_the_number_of_genes_with_perfect_matches_in_paf.py mapping_genes.paf
     ```
+    
+## 📊 Reproducing Figure 3C  
+    ```bash
+    python scripts/comparing_two_assemblies.py <output.pdf>
+    ```
+
 
 
 
