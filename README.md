@@ -79,38 +79,29 @@ bedtools getfasta \
   -fo ToxoDB-68_TgondiiME49_Genes.fasta \
   -name
 ```
+### 📁 Assembly Statistics Resources
+
+The `resources/` directory in this repository includes two helpful tables:
+
+- **`Contig_names.ods`**  
+  Maps assembled contigs to chromosome names, based on genome annotation output from Companion (`pseudo.pseudochr.agp` file).
+
+- **`Chromosome_length.ods`**  
+Provides chromosome lengths across the three assemblies, based on the longest contigs representing each chromosome as listed in Contig_names.ods..
 ---
 
 ## 📊 Reproducing Figure 3A
 
-This section outlines how to compute asembly statistics for the three assemblies.
-1. Assembly length, Number of contigs and Contig N50: ``` seqkit stats -a <assembly.fasta> ```  
-2. data directory in this repos contains tables Contig_names.ods and Chromosome_length.ods. the first one was obtained from genome annotain results from Companion pseudo.pseudochr.agp file that maps the assembled contigs to Chromsome name. the number of Chromsoome level contigs was obtained from the largest contig making the chromsoe and divided by the expected length of the chromsome which is the average of the chromsome length in the thress assembles. percentage >=99% is consdered chromsome-level assembly contig
-3.  - figure 3A, number of mapped genes
+This section outlines how to compute assembly statistics and gene mapping metrics for the three assemblies.
+### 1. Assembly Statistics ```bash seqkit stats -a assembly.fasta```
 
 
 
-the fasta file is in  /home/yomna/Desktop/PhD_Yomna_Gohar/papers/Toxo_variants_paper_prefinal/Data/ToxoDB-68_TgondiiME49_Genes_2.fasta and contains 8778
 
 
-conda activate snakemake-tutorial
-genes were mapped to xie et al: minimap2 -cx map-ont /home/yomna/hpc/fasta/ToxoME49_GenBank_JACEHA000000000.1.fasta /home/yomna/Desktop/PhD_Yomna_Gohar/papers/Toxo_variants_paper_prefinal/Data/ToxoDB-68_TgondiiME49_Genes_2.fasta > mapping_genes.paf
-results are in: /home/yomna/hpc_project/xie_et_al/mapped_genes_to_the_assembly
-counting number of mapped genes: awk '{print $1}' mapping_genes.paf | sort | uniq | wc -l
 
-TGA4:
-conda activate snakemake-tutorial
-minimap2 -cx map-ont GCF_000006565.2_TGA4_genomic.fasta /home/yomna/Desktop/PhD_Yomna_Gohar/papers/Toxo_variants_paper_prefinal/Data/ToxoDB-68_TgondiiME49_Genes_2.fasta >  mapping_genes_to_TGA4_using_new_fasta.paf
-results are in: /home/yomna/Desktop/PhD_Yomna_Gohar/Toxo_referance
-counting: awk '{print $1}' mapping_genes_to_TGA4_using_new_fasta.paf | sort | uniq | wc -l
-python /home/yomna/Desktop/PhD_Yomna_Gohar/papers/Toxo_variants_paper/additional_scripts/Check_the_number_of_genes_with_perfect_matches_in_paf.py  mapping_genes_to_TGA4_using_new_fasta.paf
 
-2015T assembly:
-conda activate snakemake-tutorial
-minimap2 -cx map-ont filtered_contigs_without_contig_51.fasta /home/yomna/Desktop/PhD_Yomna_Gohar/papers/Toxo_variants_paper_prefinal/Data/ToxoDB-68_TgondiiME49_Genes_2.fasta >  mapping_genes.paf
-results are in: /home/yomna/hpc_project/ToxoME49_2015_2022/combined_with_pipline_after_rebasecalling_and_herro_using_all_read_that_donot_map_to_human_or_mouse/after_mit_removal/assembly/nano-corr/40-polishing
-counting: awk '{print $1}' mapping_genes.paf | sort | uniq | wc -l
-python /home/yomna/Desktop/PhD_Yomna_Gohar/papers/Toxo_variants_paper/additional_scripts/Check_the_number_of_genes_with_perfect_matches_in_paf.py mapping_genes.paf
+
 
 - counting genes and psudogenes
 /home/yomna/counting_number_of_genes.py
