@@ -98,6 +98,7 @@ This section outlines how to compute assembly statistics and gene mapping metric
      seqkit stats -a <assembly.fasta>
     ```
  2. **Number of chromosome-level  contigs**
+    
     Use the file Chromosome_length.ods and count cells with values ≥99% in columns D, F, and H.
     
  4. **Number of mapped genes**
@@ -105,9 +106,10 @@ This section outlines how to compute assembly statistics and gene mapping metric
     minimap2 -cx map-ont <assembly.fasta> ToxoDB-68_TgondiiME49_Genes.fasta > mapping_genes.paf
     awk '{print $1}' mapping_genes.paf | sort | uniq | wc -l
     ```
- 5. **counting genes and pseudogenes**
+ 5. **Fraction of perfectly mapped genes**
+  
     ```bash
-   scripts/Check_the_number_of_genes_with_perfect_matches_in_paf.py <mapping_genes.paf>
+    scripts/Check_the_number_of_genes_with_perfect_matches_in_paf.py <mapping_genes.paf>
     ```
 
 
