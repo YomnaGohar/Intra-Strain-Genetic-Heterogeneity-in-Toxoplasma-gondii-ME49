@@ -41,8 +41,6 @@ This section outlines how to compute basic sequencing statistics for each sample
 
 ## 🧬 Assembly Comparisons
 
-This section describes how to prepare the data needed to compare gene mapping across different *Toxoplasma gondii* assemblies for Figure 3A.
-
 ---
 
 ### 📥 Download Required Assemblies
