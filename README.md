@@ -39,7 +39,7 @@ This section outlines how to compute basic sequencing statistics for each sample
 
    ---
 
-## 🧬 Assembly Comparisons
+## 🧬 Assembly Comparisons in Figure 3
 
 ---
 
@@ -109,7 +109,7 @@ This section outlines how to compute assembly statistics and gene mapping metric
  5. **Fraction of perfectly mapped genes**
   
     ```bash
-    scripts/Check_the_number_of_genes_with_perfect_matches_in_paf.py <mapping_genes.paf>
+    python scripts/Check_the_number_of_genes_with_perfect_matches_in_paf.py mapping_genes.paf
     ```
 
 
