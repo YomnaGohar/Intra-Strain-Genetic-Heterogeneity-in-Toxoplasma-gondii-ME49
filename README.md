@@ -113,6 +113,7 @@ This section outlines how to compute assembly statistics and gene mapping metric
     ```
     
 ## 📊 Reproducing Figure 3C  
+
     ```bash
     python scripts/comparing_two_assemblies.py <output.pdf>
     ```
