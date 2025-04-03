@@ -39,7 +39,7 @@ This section outlines how to compute basic sequencing statistics for each sample
 
    ---
 
-## 🧬 Assembly Comparisons
+## 🧬 Assembly Comparisons in Figure 3
 
 ---
 
@@ -93,9 +93,23 @@ Provides chromosome lengths across the three assemblies, based on the longest co
 ## 📊 Reproducing Figure 3A
 
 This section outlines how to compute assembly statistics and gene mapping metrics for the three assemblies.
- 1. **Assembly Statistics**
+ 1. **Assembly length, Number of contigs and Contig N50**
      ```bash
-     seqkit stats -a assembly.fasta
+     seqkit stats -a <assembly.fasta>
+    ```
+ 2. **Number of chromosome-level  contigs**
+    
+    Use the file Chromosome_length.ods and count cells with values ≥99% in columns D, F, and H.
+    
+ 4. **Number of mapped genes**
+    ```bash
+    minimap2 -cx map-ont <assembly.fasta> ToxoDB-68_TgondiiME49_Genes.fasta > mapping_genes.paf
+    awk '{print $1}' mapping_genes.paf | sort | uniq | wc -l
+    ```
+ 5. **Fraction of perfectly mapped genes**
+  
+    ```bash
+    python scripts/Check_the_number_of_genes_with_perfect_matches_in_paf.py mapping_genes.paf
     ```
 
 
@@ -105,6 +119,3 @@ This section outlines how to compute assembly statistics and gene mapping metric
 
 
 
-
-- counting genes and psudogenes
-/home/yomna/counting_number_of_genes.py
