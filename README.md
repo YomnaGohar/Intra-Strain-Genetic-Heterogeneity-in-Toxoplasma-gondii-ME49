@@ -131,6 +131,8 @@ minimap2 -ax map-ont <xia_assembly.fasta> non_mit_reads.fastq \
   | samtools sort -o mapped_sorted.bam
 
 samtools index mapped_sorted.bam
+```
+### Step 2: Extract the Longest Read in the rDNA Region
 then find the longest read that maps to the rDNA region in the assembly, which is position JACEHA010000011.1:1373482_1530609  
 
     ```bash
