@@ -125,19 +125,21 @@ This section describes how to explore the structure of rDNA repeats using long r
 ### Step 1: Map 2015T Reads to the Xia et al. Assembly
 Use the `non_mit_reads.fastq` file (produced by the filtering pipeline) and map it to the Xia et al. assembly:
 
-```bash
-minimap2 -ax map-ont <xia_assembly.fasta> non_mit_reads.fastq \
-  | samtools view -bS - \
-  | samtools sort -o mapped_sorted.bam
-
-samtools index mapped_sorted.bam
-```
+   ```bash
+   minimap2 -ax map-ont <xia_assembly.fasta> non_mit_reads.fastq \
+     | samtools view -bS - \
+     | samtools sort -o mapped_sorted.bam
+   
+   samtools index mapped_sorted.bam
+   ```
 ### Step 2: Extract the Longest Read in the rDNA Region
-then find the longest read that maps to the rDNA region in the assembly, which is position JACEHA010000011.1:1373482_1530609  
+Target region: JACEHA010000011.1:1,373,482–1,530,609
+Run the script to find the longest read mapped to this region:
 
-    ```bash
-    python script/find_longes_read_name.py mapped_sorted.bam JACEHA010000011.1 1373482 1530609  
-    ```
+   ```bash
+   python script/find_longes_read_name.py mapped_sorted.bam JACEHA010000011.1 1373482 1530609  
+   ```
+    
     the above command should print read name c415285b-0462-4167-b011-16964416454f. extrat this read
     ```bash
     seqkit grep -p 'c415285b-0462-4167-b011-16964416454f'non_mit_reads.fastq > longest_read.fastq  
