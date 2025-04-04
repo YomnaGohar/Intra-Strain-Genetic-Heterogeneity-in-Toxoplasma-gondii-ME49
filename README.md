@@ -122,11 +122,19 @@ Barplot
 
 ## 📊 Reproducing Figure 3D  
 
-Barplot
+to learn about rDNA structure.
+first map downloaded mit read and human/mouse fastq file from 2015T that was produced from the filtering pipeline to the Xia et al assembly. fasta
 
     ```bash
-    python scripts/comparing_two_assemblies.py <output.pdf>
+    minimap2 -ax map-ont <xia et al assembly.fasta> non_mit_reads.fastq  | samtools view -bS | samtools sort > mapped_sorted.bam
+    samtools index mapped_sorted.bam
     ```
+then find the longest read that maps to the rDNA region in the assembly, which is position JACEHA010000011.1:1373482_1530609  
+
+    ```bash
+    python script/find_longes_read_name.py mapped_sorted.bam JACEHA010000011.1 1373482 1530609  
+    ```
+
 
 
 
