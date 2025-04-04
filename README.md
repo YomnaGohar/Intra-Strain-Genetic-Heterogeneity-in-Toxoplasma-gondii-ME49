@@ -138,17 +138,22 @@ Run the script to find the longest read mapped to this region:
 
    ```bash
    python script/find_longes_read_name.py mapped_sorted.bam JACEHA010000011.1 1373482 1530609  
+   ```  
+This should print the read name: c415285b-0462-4167-b011-16964416454f
+Extract the corresponding read from the FASTQ file:
+   ```bash
+   seqkit grep -p 'c415285b-0462-4167-b011-16964416454f'non_mit_reads.fastq > longest_read.fastq  
    ```
-    
-    the above command should print read name c415285b-0462-4167-b011-16964416454f. extrat this read
-    ```bash
-    seqkit grep -p 'c415285b-0462-4167-b011-16964416454f'non_mit_reads.fastq > longest_read.fastq  
-    ```
-    then map rDNA sequence present in a fasta file in Data/rRNA.fasta
-    minimap2 -cx map-ont rRNA.fasta longest_read.fastq > mapping_longest_reads_to_rRNA.paf
-
-    visulaize
-     script/visualize_rDNA_blocks.py Data/rRNA.fasta mapping_longest_reads_to_rRNA.paf path/to/output/.pdf
+### Step 3: Map Longest Read to rDNA Reference
+The reference rDNA sequence is located in Data/rRNA.fasta. Use the following command:
+   ```bash
+   minimap2 -cx map-ont rRNA.fasta longest_read.fastq > mapping_longest_reads_to_rRNA.paf
+   ```
+### Step 4: Visualize rDNA Blocks
+Generate a visualization of the rDNA block structure on the longest read:
+   ```bash
+   script/visualize_rDNA_blocks.py Data/rRNA.fasta mapping_longest_reads_to_rRNA.paf path/to/output/.pdf
+   ```
     
     
 
