@@ -169,6 +169,18 @@ All extracted sequences are compiled in:
    ```
 To visualize the MSA, you can use Jalview. Annotation data is available in `Data/ROP8-ROP2A_sequences.annotation`
 
+#### 📊 Figure 4B
+
+To produce the heatmap, run the following script:
+
+```bash
+python script/MSA_analysis_mod.py clustalo2.fa heatmap.pdf
+```
+To calculate similarity to the reference ROP2A and ROP8 sequences, use:
+   ```bash
+   python script/similarity_to_reference_ROPs.py  clustelo2.fa similarity.csv
+   ```
+
 
 
     
