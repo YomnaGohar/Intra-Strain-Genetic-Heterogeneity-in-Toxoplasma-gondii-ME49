@@ -1,0 +1,56 @@
+exons	CCFFCC
+introns	CC0000
+utrs	FFCCCC
+
+STARTFILTERS
+ENDFILTERS
+STARTGROUP	ROP2A_ME49_ref
+Features for ROP2A_ME49_ref	ROP2A_ME49_ref	-1	1	1729	gene
+Features for ROP2A_ME49_ref	ROP2A_ME49_ref	-1	1	1729	exon
+Features for ROP2A_ME49_ref	ROP2A_ME49_ref	-1	430	1728	CDS
+Features for ROP2A_ME49_ref	ROP2A_ME49_ref	-1	430	432	start_codon
+Features for ROP2A_ME49_ref	ROP2A_ME49_ref	-1	1	429	utrs
+ENDGROUP	ROP2A_ME49_ref
+
+STARTGROUP	2000B_ROP2A-2B_stitched_read:36681-38986_from_Augustus_only
+Features for 2000B_ROP2A-2B_stitched_read:36681-38986_from_Augustus_only	2000B_ROP2A-2B_stitched_read:36681-38986_from_Augustus_only	-1	1	2306	gene
+Features for 2000B_ROP2A-2B_stitched_read:36681-38986_from_Augustus_only	2000B_ROP2A-2B_stitched_read:36681-38986_from_Augustus_only	-1	1	2306	exon
+Features for 2000B_ROP2A-2B_stitched_read:36681-38986_from_Augustus_only	2000B_ROP2A-2B_stitched_read:36681-38986_from_Augustus_only	-1	1	79	utrs
+Features for 2000B_ROP2A-2B_stitched_read:36681-38986_from_Augustus_only	2000B_ROP2A-2B_stitched_read:36681-38986_from_Augustus_only	-1	80	1837	CDS
+Features for 2000B_ROP2A-2B_stitched_read:36681-38986_from_Augustus_only	2000B_ROP2A-2B_stitched_read:36681-38986_from_Augustus_only	-1	1838	2306	utrs
+ENDGROUP	2000B_ROP2A-2B_stitched_read:36681-38986_from_Augustus_only
+
+STARTGROUP	2000B_ROP2A-2A_stitched_read:28091-30066_from_Augustus_only
+Features for 2000B_ROP2A-2A_stitched_read:28091-30066_from_Augustus_only	2000B_ROP2A-2A_stitched_read:28091-30066_from_Augustus_only	-1	1	1976	gene
+Features for 2000B_ROP2A-2A_stitched_read:28091-30066_from_Augustus_only	2000B_ROP2A-2A_stitched_read:28091-30066_from_Augustus_only	-1	1	1976	exon
+Features for 2000B_ROP2A-2A_stitched_read:28091-30066_from_Augustus_only	2000B_ROP2A-2A_stitched_read:28091-30066_from_Augustus_only	-1	1	80	utrs
+Features for 2000B_ROP2A-2A_stitched_read:28091-30066_from_Augustus_only	2000B_ROP2A-2A_stitched_read:28091-30066_from_Augustus_only	-1	81	1838	CDS
+Features for 2000B_ROP2A-2A_stitched_read:28091-30066_from_Augustus_only	2000B_ROP2A-2A_stitched_read:28091-30066_from_Augustus_only	-1	1839	1976	utrs
+ENDGROUP	2000B_ROP2A-2A_stitched_read:28091-30066_from_Augustus_only
+
+STARTGROUP	2015T_assembly_ROP2A-2B_contig_46:7313278-7315583_from_Augustus_only
+Features for 2015T_assembly_ROP2A-2B_contig_46:7313278-7315583_from_Augustus_only	2015T_assembly_ROP2A-2B_contig_46:7313278-7315583_from_Augustus_only	-1	1	2306	gene
+Features for 2015T_assembly_ROP2A-2B_contig_46:7313278-7315583_from_Augustus_only	2015T_assembly_ROP2A-2B_contig_46:7313278-7315583_from_Augustus_only	-1	1	2306	exon
+Features for 2015T_assembly_ROP2A-2B_contig_46:7313278-7315583_from_Augustus_only	2015T_assembly_ROP2A-2B_contig_46:7313278-7315583_from_Augustus_only	-1	1	82	utrs
+Features for 2015T_assembly_ROP2A-2B_contig_46:7313278-7315583_from_Augustus_only	2015T_assembly_ROP2A-2B_contig_46:7313278-7315583_from_Augustus_only	-1	83	1840	CDS
+Features for 2015T_assembly_ROP2A-2B_contig_46:7313278-7315583_from_Augustus_only	2015T_assembly_ROP2A-2B_contig_46:7313278-7315583_from_Augustus_only	-1	1841	2306	utrs
+ENDGROUP	2015T_assembly_ROP2A-2B_contig_46:7313278-7315583_from_Augustus_only
+
+STARTGROUP	Xia_et_al_assembly_ROP2A-2A_JACEHA010000012.1:7310951-7312866_from_Augustus_only
+Features for Xia_et_al_assembly_ROP2A-2A_JACEHA010000012.1:7310951-7312866_from_Augustus_only	Xia_et_al_assembly_ROP2A-2A_JACEHA010000012.1:7310951-7312866_from_Augustus_only	-1	1	1916	gene
+Features for Xia_et_al_assembly_ROP2A-2A_JACEHA010000012.1:7310951-7312866_from_Augustus_only	Xia_et_al_assembly_ROP2A-2A_JACEHA010000012.1:7310951-7312866_from_Augustus_only	-1	1	1916	exon
+Features for Xia_et_al_assembly_ROP2A-2A_JACEHA010000012.1:7310951-7312866_from_Augustus_only	Xia_et_al_assembly_ROP2A-2A_JACEHA010000012.1:7310951-7312866_from_Augustus_only	-1	1	78	utrs
+Features for Xia_et_al_assembly_ROP2A-2A_JACEHA010000012.1:7310951-7312866_from_Augustus_only	Xia_et_al_assembly_ROP2A-2A_JACEHA010000012.1:7310951-7312866_from_Augustus_only	-1	79	273	CDS
+Features for Xia_et_al_assembly_ROP2A-2A_JACEHA010000012.1:7310951-7312866_from_Augustus_only	Xia_et_al_assembly_ROP2A-2A_JACEHA010000012.1:7310951-7312866_from_Augustus_only	-1	408	1451	CDS
+Features for Xia_et_al_assembly_ROP2A-2A_JACEHA010000012.1:7310951-7312866_from_Augustus_only	Xia_et_al_assembly_ROP2A-2A_JACEHA010000012.1:7310951-7312866_from_Augustus_only	-1	274	407	introns
+Features for Xia_et_al_assembly_ROP2A-2A_JACEHA010000012.1:7310951-7312866_from_Augustus_only	Xia_et_al_assembly_ROP2A-2A_JACEHA010000012.1:7310951-7312866_from_Augustus_only	-1	1452	1916	utrs
+ENDGROUP	Xia_et_al_assembly_ROP2A-2A_JACEHA010000012.1:7310951-7312866_from_Augustus_only
+STARTGROUP	ROP8_ME_ref
+Features for ROP8_ME_ref	ROP8_ME_ref	-1	1	2635	gene
+Features for ROP8_ME_ref	ROP8_ME_ref	-1	1	2635	exon
+Features for ROP8_ME_ref	ROP8_ME_ref	-1	302	2026	CDS
+Features for ROP8_ME_ref	ROP8_ME_ref	-1	302	304	start_codon
+Features for ROP8_ME_ref	ROP8_ME_ref	-1	2027	2029	stop_codon
+Features for ROP8_ME_ref	ROP8_ME_ref	-1	1	301	utrs
+Features for ROP8_ME_ref	ROP8_ME_ref	-1	2030	2635	utrs
+ENDGROUP	ROP8_ME_ref
