@@ -154,7 +154,16 @@ Generate a visualization of the rDNA block structure on the longest read:
    ```bash
    script/visualize_rDNA_blocks.py Data/rRNA.fasta mapping_longest_reads_to_rRNA.paf path/to/output/.pdf
    ```
-    
+## 📊 Reproducing Figure 4
+####  ROP8–ROP2A Region Sequences
+The ROP8–ROP2A-related sequences were extracted from the following three assemblies:
+- `2015T_assembly.fa`
+- `Data/2000B_ROP8_ROP2A_manually_assembled.fa`
+- `Data/Xia_et_al_assembly_after_processing_with_companion.fasta.gz`
+> **Note:** The last FASTA file corresponds to the Xia et al. assembly, but it was processed with Companion to bring it into the reference orientation.
+All extracted sequences are compiled in:  
+`Data/ROP8-ROP2A_sequences.fa`
+
     
 
 
