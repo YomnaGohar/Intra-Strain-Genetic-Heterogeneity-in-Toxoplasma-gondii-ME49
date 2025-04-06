@@ -181,6 +181,48 @@ To calculate similarity to the reference ROP2A and ROP8 sequences, use:
    ```bash
    python script/similarity_to_reference_ROPs.py  clustelo2.fa similarity.csv
    ```
+## 📊 Reproducing Figure 5
+
+The bar plots in Figure 5 are based on the variant analysis pipeline available at:  
+🔗 [https://github.com/YomnaGohar/ToxoVar/](https://github.com/YomnaGohar/ToxoVar/)
+
+This pipeline produces a catalog of variants in the following file:  
+`{output_dir}/Graph/graph_construction/results/merged_vg_combined_table_placed_ref_for_igv.vcf`
+
+This VCF file was then filtered to:
+- Remove variants called as non-reference in 2015T
+- Remove loci where the reference allele in 2015T was present at <90% frequency
+- Eliminate 6 additional loci that differed before and after graph construction, where manual investigation suggested that the graph-based genotype was likely incorrect or the true underlying genotype remained ambiguous.
+
+The resulting filtered VCF is available at:  
+`Data/merged_vg_combined_table_placed_ref_for_igv_no_2015_manual.vcf.gz`
+
+This file can be specified in the `config.yaml` file to continue the remaining steps of the pipeline, which include:
+- Stratifying positions by NUMTs, homopolymers, and tandem repeats in `Data/merged_vg_combined_table_placed_ref_for_igv_no_2015_manual.vcf.gz`
+- Using Ensembl VEP to predict the functional impact of the variant
+  
+To stratify the variants before filtering, use the following commands along with the BED files provided in the ToxoVar repository.
+```bash
+# Extract VCF header
+zgrep '^#' merged_vg_combined_table_placed_ref_for_igv.vcf > header.txt
+# Variants outside of NUMTs, homopolymers, and tandem repeats
+cat header.txt > variants_no_low_complexity.vcf
+bedtools intersect -v -a merged_vg_combined_table_placed_ref_for_igv.vcf -b <tandem.bed> <homopolymer.bed> <numts.bed> >> normal.vcf
+
+# Variants in NUMT regions only
+cat header.txt > variants_numt.vcf
+bedtools intersect -u -a merged_vg_combined_table_placed_ref_for_igv.vcf -b <numts.bed> >> numt.vcf
+
+# Variants in homopolymers (excluding those also in NUMTs)
+cat header.txt > temp.vcf
+bedtools intersect -u -a merged_vg_combined_table_placed_ref_for_igv.vcf -b <homopolymer.bed> >> temp.vcf
+bedtools intersect -v -a temp.vcf -b <numts.bed> > homopolymer.vcf
+
+# Variants in tandem repeats (excluding those in NUMTs and homopolymers)
+cat header.txt > temp.vcf
+bedtools intersect -u -a merged_vg_combined_table_placed_ref_for_igv.vcf -b <tandem.bed> >> temp.vcf
+bedtools intersect -v -a temp.vcf -b <numts.bed> <homopolymer.bed> > tandem.vcf
+```
 
 
 
