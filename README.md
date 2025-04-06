@@ -118,6 +118,7 @@ Barplot
 
     ```bash
     python scripts/comparing_two_assemblies.py <output.pdf>
+    ```
 
 ## 📊 Reproducing Figure 3D  
 
@@ -152,7 +153,7 @@ The reference rDNA sequence is located in Data/rRNA.fasta. Use the following com
 ### Step 4: Visualize rDNA Blocks
 Generate a visualization of the rDNA block structure on the longest read:
    ```bash
-   script/visualize_rDNA_blocks.py Data/rRNA.fasta mapping_longest_reads_to_rRNA.paf path/to/output/.pdf
+   python script/visualize_rDNA_blocks.py Data/rRNA.fasta mapping_longest_reads_to_rRNA.paf path/to/output/.pdf
    ```
 ## 📊 Reproducing Figure 4
 ###  ROP8–ROP2A Region Sequences
