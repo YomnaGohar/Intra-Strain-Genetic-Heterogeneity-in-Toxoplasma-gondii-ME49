@@ -11,7 +11,7 @@ Download raw Nanopore sequencing data from **NCBI BioProject**:
 - **BioProject:** [PRJNA1241696](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1241696)
 
 ### Biosample IDs:
-- **2015T:**  `SAMN47788138`, `SAMN47788137`, `SAMN47788136`, `SAMN47788135`, `SAMN47788134`, , `SAMN47788133`  
+- **2015T:**  `SAMN47788138`, `SAMN47788137`, `SAMN47788136`, `SAMN47788135`, `SAMN47788134`, `SAMN47788133`  
 - **2020T:** `SAMN47561284`, `SAMN47561285`
 - **2000B:** `SAMN47757524` to `SAMN47757542`
 
